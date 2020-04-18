@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <memory>
-
+#include <stack>
 class SubDirectory;
 
 class Directory : public std::enable_shared_from_this<Directory>
@@ -12,10 +12,12 @@ public:
     void showSubDirectory();
     void addSubDirectory(std::shared_ptr<SubDirectory> sub);
     std::string dirName;
+    virtual ~Directory() = default;
 protected:
     
     std::vector<std::shared_ptr<SubDirectory>> children;
 };
+
 
 
 
@@ -30,11 +32,26 @@ public:
         return this->parent;
     }
     void showPath(){
-        auto pp = this->parent;
-        while(!pp){
-            std::cout<<pp->dirName;
-            pp = pp->parent;
+        auto pp = shared_from_this();
+        std::stack<std::string> nameStack;
+
+        while(pp){
+            nameStack.push(pp->dirName);
+            std::cout<<pp->dirName<<std::endl;
+            if(auto temp = std::dynamic_pointer_cast<SubDirectory>(pp)){
+                pp = temp->parent;
+            }else{
+                pp = NULL;
+            }
         }
+        
+        while(!nameStack.empty()){
+            auto & tt = nameStack.top();
+            std::cout<<"/"<<tt;
+            nameStack.pop();
+
+        }
+        std::cout<<std::endl;
     }
 private:
     std::shared_ptr<Directory> parent;
@@ -80,15 +97,16 @@ void cmd_rm()
 int main()
 {
 
-    auto dir = std::make_shared<Directory>("/");
+    auto dir = std::make_shared<Directory>("");
 
-    auto dir1 = std::make_shared<SubDirectory>("a");
-    auto dir2 = std::make_shared<SubDirectory>("b");
-    auto dir3 = std::make_shared<SubDirectory>("c");
+    auto dir1 = std::make_shared<SubDirectory>("aa");
+    auto dir2 = std::make_shared<SubDirectory>("bb");
+    auto dir3 = std::make_shared<SubDirectory>("cc");
 
     dir->addSubDirectory(dir1);
     dir->addSubDirectory(dir2);
     dir2->addSubDirectory(dir3);
+
      
     dir3->showPath();
     //dir->showSubDirectory();

@@ -11,93 +11,127 @@ public:
     Directory(std::string name) : dirName(name) {}
     void showSubDirectory();
     void addSubDirectory(std::shared_ptr<SubDirectory> sub);
+    std::shared_ptr<Directory> findByName(std::string name);
+    
     std::string dirName;
     virtual ~Directory() = default;
+
 protected:
-    
     std::vector<std::shared_ptr<SubDirectory>> children;
 };
-
-
 
 
 class SubDirectory : public Directory
 {
 public:
-    SubDirectory(std::string name) : Directory(name){}
-    void setParent(std::shared_ptr<Directory> parent){
+    SubDirectory(std::string name) : Directory(name) {}
+    void setParent(std::shared_ptr<Directory> parent)
+    {
         this->parent = parent;
     }
-    std::shared_ptr<Directory> getParent(){
+    std::shared_ptr<Directory> getParent()
+    {
         return this->parent;
     }
-    void showPath(){
-        auto pp = shared_from_this();
-        std::stack<std::string> nameStack;
+    void showPath();
+    std::string getPath();
+    virtual ~SubDirectory() = default;
 
-        while(pp){
-            nameStack.push(pp->dirName);
-            std::cout<<pp->dirName<<std::endl;
-            if(auto temp = std::dynamic_pointer_cast<SubDirectory>(pp)){
-                pp = temp->parent;
-            }else{
-                pp = NULL;
-            }
-        }
-        
-        while(!nameStack.empty()){
-            auto & tt = nameStack.top();
-            std::cout<<"/"<<tt;
-            nameStack.pop();
-
-        }
-        std::cout<<std::endl;
-    }
 private:
     std::shared_ptr<Directory> parent;
 };
 
+class CommandExecutor
+{
+    void cmd_mkdir(std::string path, std::string name);
+    void cmd_cp();
+    void cmd_rm();
+};
 
 
-void Directory::addSubDirectory(std::shared_ptr<SubDirectory> sub)
+std::shared_ptr<Directory> Directory::findByName(std::string name)
+{
+    std::cout<<name<<std::endl;
+    for (auto &i : children){
+        std::cout<<name<<" ? "<<i->getPath()<<"=="<<(i->getPath() == name)<<std::endl;
+        if(i->getPath() == name){
+            std::cout<<"good!"<<name<<" , "<<i->getPath()<<std::endl;
+            return i;
+        }
+    }
+    return NULL;
+
+}
+void SubDirectory::showPath()
 {
     
-    auto pp=std::shared_ptr(shared_from_this());
+    std::cout <<getPath() <<std::endl;
+}
+std::string SubDirectory::getPath(){
+    auto pp = shared_from_this();
+    std::stack<std::string> nameStack;
+    std::string pathResult = "";
+
+    while (pp)
+    {
+        if (std::dynamic_pointer_cast<SubDirectory>(pp))
+            nameStack.push(pp->dirName);
+
+        if (auto temp = std::dynamic_pointer_cast<SubDirectory>(pp))
+            pp = temp->parent;
+        else
+            pp = NULL;
+    }
+
+    while (!nameStack.empty())
+    {
+        auto &tt = nameStack.top();
+        //std::cout << "/" << tt;
+        pathResult+="/"+tt;
+        nameStack.pop();
+    }
+    return pathResult;
+}
+void Directory::addSubDirectory(std::shared_ptr<SubDirectory> sub)
+{
+
+    auto pp = std::shared_ptr(shared_from_this());
     sub->setParent(pp);
     children.push_back(sub);
-    
-
 }
 
 void Directory::showSubDirectory()
+{
+    if (!std::dynamic_pointer_cast<SubDirectory>(shared_from_this()))
+        std::cout<<this->dirName<<std::endl;
+    
+    for (auto &i : children)
     {
-        
-        std::cout<<"/"<<this->dirName<<std::endl;
-        for (auto &i : children)
+        i->showPath();
+        if (!i->children.empty())
         {
-            std::cout<<"/"<<i->dirName<<std::endl;
-            if (!i->children.empty()){
-                
-                i->showSubDirectory();
-            }
-                
+
+            i->showSubDirectory();
         }
     }
+}
 
-void cmd_mkdir()
+void CommandExecutor::cmd_mkdir(std::string path, std::string name)
 {
+    std::cout<<"adding "<<name<<" to path: "<<path <<std::endl;
 
 }
-void cmd_cp()
+void CommandExecutor::cmd_cp()
 {
 }
-void cmd_rm()
+void CommandExecutor::cmd_rm()
 {
 }
+
 int main()
 {
 
-    auto dir = std::make_shared<Directory>("");
+    auto dir = std::make_shared<Directory>("/");
 
     auto dir1 = std::make_shared<SubDirectory>("aa");
     auto dir2 = std::make_shared<SubDirectory>("bb");
@@ -107,9 +141,11 @@ int main()
     dir->addSubDirectory(dir2);
     dir2->addSubDirectory(dir3);
 
-     
-    dir3->showPath();
-    //dir->showSubDirectory();
-
+    //dir3->showPath();
+    dir->showSubDirectory();
+    
+    auto path = dir3->getPath();
+    auto rr = dir->findByName(path);
+    
     return 0;
 }

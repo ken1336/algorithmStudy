@@ -15,4 +15,14 @@ memory
 -
 stack
 -
+string
+-
+sstream
+-
+list
+-
+map
+-
+assert.h
+-
 

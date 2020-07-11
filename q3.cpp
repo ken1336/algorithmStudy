@@ -11,7 +11,8 @@
 class SubDirectory;
 
 
-static std::list<std::string> tokenize_getline(const std::string& data, const char delimiter = ' ') {
+static std::list<std::string> tokenize_getline(const std::string& data, const char delimiter = ' ') 
+{
 	std::list<std::string> result;
 	std::string token;
 	std::stringstream ss(data);
@@ -52,7 +53,6 @@ public:
     std::shared_ptr<Directory> getParent()
     {
         auto tmep = this->parent;
-
         return this->parent.lock();
     }
     void showPath();
@@ -70,7 +70,8 @@ public:
     void cmd_cp();
     void cmd_rm();
 };
-std::shared_ptr<Directory> Directory::findByPath(std::string path){
+std::shared_ptr<Directory> Directory::findByPath(std::string path)
+{
     
     auto tokenizedPath = substringUnderRoot(path,'/');
     auto pwd = shared_from_this();
@@ -114,7 +115,6 @@ std::string SubDirectory::getPath(){
     while (!nameStack.empty())
     {
         auto &tt = nameStack.top();
-        //std::cout << "/" << tt;
         pathResult+="/"+tt;
         nameStack.pop();
     }

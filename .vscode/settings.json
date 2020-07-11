@@ -75,6 +75,9 @@
         "memory_resource": "cpp",
         "__tree": "cpp",
         "map": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "__functional_base_03": "cpp",
+        "filesystem": "cpp",
+        "__memory": "cpp"
     }
 }

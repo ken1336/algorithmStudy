@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/min/Desktop/cpp/study/algorithm/q5.cpp
+/Users/min/Desktop/cpp/study/algorithm/zum-solution-1.cpp
 iostream
 -
-type_traits
+vector
+-
+algorithm
 -
 

@@ -123,32 +123,32 @@ q/fast:
 	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/build
 .PHONY : q/fast
 
-q5.o: q5.cpp.o
+zum-solution-1.o: zum-solution-1.cpp.o
 
-.PHONY : q5.o
+.PHONY : zum-solution-1.o
 
 # target to build an object file
-q5.cpp.o:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/q5.cpp.o
-.PHONY : q5.cpp.o
+zum-solution-1.cpp.o:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/zum-solution-1.cpp.o
+.PHONY : zum-solution-1.cpp.o
 
-q5.i: q5.cpp.i
+zum-solution-1.i: zum-solution-1.cpp.i
 
-.PHONY : q5.i
+.PHONY : zum-solution-1.i
 
 # target to preprocess a source file
-q5.cpp.i:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/q5.cpp.i
-.PHONY : q5.cpp.i
+zum-solution-1.cpp.i:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/zum-solution-1.cpp.i
+.PHONY : zum-solution-1.cpp.i
 
-q5.s: q5.cpp.s
+zum-solution-1.s: zum-solution-1.cpp.s
 
-.PHONY : q5.s
+.PHONY : zum-solution-1.s
 
 # target to generate assembly for a file
-q5.cpp.s:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/q5.cpp.s
-.PHONY : q5.cpp.s
+zum-solution-1.cpp.s:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/zum-solution-1.cpp.s
+.PHONY : zum-solution-1.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... q"
-	@echo "... q5.o"
-	@echo "... q5.i"
-	@echo "... q5.s"
+	@echo "... zum-solution-1.o"
+	@echo "... zum-solution-1.i"
+	@echo "... zum-solution-1.s"
 .PHONY : help
 
 

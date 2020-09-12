@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/min/Desktop/cpp/study/algorithm/zum-solution-1.cpp
-iostream
+/Users/min/Desktop/cpp/study/algorithm/Kakao2020_5.cpp
+string
 -
 vector
 -
-algorithm
+iostream
 -
 

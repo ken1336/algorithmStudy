@@ -123,32 +123,32 @@ q/fast:
 	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/build
 .PHONY : q/fast
 
-zum-solution-1.o: zum-solution-1.cpp.o
+Kakao2020_5.o: Kakao2020_5.cpp.o
 
-.PHONY : zum-solution-1.o
+.PHONY : Kakao2020_5.o
 
 # target to build an object file
-zum-solution-1.cpp.o:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/zum-solution-1.cpp.o
-.PHONY : zum-solution-1.cpp.o
+Kakao2020_5.cpp.o:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Kakao2020_5.cpp.o
+.PHONY : Kakao2020_5.cpp.o
 
-zum-solution-1.i: zum-solution-1.cpp.i
+Kakao2020_5.i: Kakao2020_5.cpp.i
 
-.PHONY : zum-solution-1.i
+.PHONY : Kakao2020_5.i
 
 # target to preprocess a source file
-zum-solution-1.cpp.i:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/zum-solution-1.cpp.i
-.PHONY : zum-solution-1.cpp.i
+Kakao2020_5.cpp.i:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Kakao2020_5.cpp.i
+.PHONY : Kakao2020_5.cpp.i
 
-zum-solution-1.s: zum-solution-1.cpp.s
+Kakao2020_5.s: Kakao2020_5.cpp.s
 
-.PHONY : zum-solution-1.s
+.PHONY : Kakao2020_5.s
 
 # target to generate assembly for a file
-zum-solution-1.cpp.s:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/zum-solution-1.cpp.s
-.PHONY : zum-solution-1.cpp.s
+Kakao2020_5.cpp.s:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Kakao2020_5.cpp.s
+.PHONY : Kakao2020_5.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... q"
-	@echo "... zum-solution-1.o"
-	@echo "... zum-solution-1.i"
-	@echo "... zum-solution-1.s"
+	@echo "... Kakao2020_5.o"
+	@echo "... Kakao2020_5.i"
+	@echo "... Kakao2020_5.s"
 .PHONY : help
 
 

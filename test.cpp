@@ -1,15 +1,30 @@
-#include<stdio.h>
+#include<iostream>
+#include <utility>
 
-int main(){
 
 
-    int * ptr;
+class Foo{
 
-    int* i=new int(5);
-    int &i2=*i;
-    i=NULL;
-    ptr=&i2;
+    int thing;
+    public:
+    
+    Foo(int input  = 0) : thing(input){} 
+    int getThing(){
+        return thing;
+    }
+    static int getInt(){
+        return 1;
+    }
+};
 
-    printf("%d",ptr);
+int main(int argc, char** argv){
+
+    Foo foo{};
+    Foo foo2(1);
+
+    std::cout<<foo.getThing()<<std::endl;
+    std::cout<<foo2.getThing()<<std::endl;
+    auto test = Foo::getInt();
+    return 0;
 
 }

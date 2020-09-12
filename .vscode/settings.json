@@ -78,6 +78,8 @@
         "list": "cpp",
         "__functional_base_03": "cpp",
         "filesystem": "cpp",
-        "__memory": "cpp"
+        "__memory": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp"
     }
 }

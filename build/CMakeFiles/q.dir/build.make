@@ -57,27 +57,27 @@ include CMakeFiles/q.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/q.dir/flags.make
 
-CMakeFiles/q.dir/Kakao2020_5.cpp.o: CMakeFiles/q.dir/flags.make
-CMakeFiles/q.dir/Kakao2020_5.cpp.o: ../Kakao2020_5.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/min/Desktop/cpp/study/algorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/q.dir/Kakao2020_5.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/q.dir/Kakao2020_5.cpp.o -c /Users/min/Desktop/cpp/study/algorithm/Kakao2020_5.cpp
+CMakeFiles/q.dir/test.cpp.o: CMakeFiles/q.dir/flags.make
+CMakeFiles/q.dir/test.cpp.o: ../test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/min/Desktop/cpp/study/algorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/q.dir/test.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/q.dir/test.cpp.o -c /Users/min/Desktop/cpp/study/algorithm/test.cpp
 
-CMakeFiles/q.dir/Kakao2020_5.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/q.dir/Kakao2020_5.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/min/Desktop/cpp/study/algorithm/Kakao2020_5.cpp > CMakeFiles/q.dir/Kakao2020_5.cpp.i
+CMakeFiles/q.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/q.dir/test.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/min/Desktop/cpp/study/algorithm/test.cpp > CMakeFiles/q.dir/test.cpp.i
 
-CMakeFiles/q.dir/Kakao2020_5.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/q.dir/Kakao2020_5.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/min/Desktop/cpp/study/algorithm/Kakao2020_5.cpp -o CMakeFiles/q.dir/Kakao2020_5.cpp.s
+CMakeFiles/q.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/q.dir/test.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/min/Desktop/cpp/study/algorithm/test.cpp -o CMakeFiles/q.dir/test.cpp.s
 
 # Object files for target q
 q_OBJECTS = \
-"CMakeFiles/q.dir/Kakao2020_5.cpp.o"
+"CMakeFiles/q.dir/test.cpp.o"
 
 # External object files for target q
 q_EXTERNAL_OBJECTS =
 
-q : CMakeFiles/q.dir/Kakao2020_5.cpp.o
+q : CMakeFiles/q.dir/test.cpp.o
 q : CMakeFiles/q.dir/build.make
 q : CMakeFiles/q.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/min/Desktop/cpp/study/algorithm/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable q"

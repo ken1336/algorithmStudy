@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/min/Desktop/cpp/study/algorithm/Kakao2020_5.cpp" "/Users/min/Desktop/cpp/study/algorithm/build/CMakeFiles/q.dir/Kakao2020_5.cpp.o"
+  "/Users/min/Desktop/cpp/study/algorithm/test.cpp" "/Users/min/Desktop/cpp/study/algorithm/build/CMakeFiles/q.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

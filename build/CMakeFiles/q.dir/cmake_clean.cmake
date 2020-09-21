@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/q.dir/Kakao2020_5.cpp.o"
+  "CMakeFiles/q.dir/test.cpp.o"
   "q"
   "q.pdb"
 )

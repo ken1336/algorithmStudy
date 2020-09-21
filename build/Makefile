@@ -123,32 +123,32 @@ q/fast:
 	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/build
 .PHONY : q/fast
 
-Kakao2020_5.o: Kakao2020_5.cpp.o
+test.o: test.cpp.o
 
-.PHONY : Kakao2020_5.o
+.PHONY : test.o
 
 # target to build an object file
-Kakao2020_5.cpp.o:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Kakao2020_5.cpp.o
-.PHONY : Kakao2020_5.cpp.o
+test.cpp.o:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/test.cpp.o
+.PHONY : test.cpp.o
 
-Kakao2020_5.i: Kakao2020_5.cpp.i
+test.i: test.cpp.i
 
-.PHONY : Kakao2020_5.i
+.PHONY : test.i
 
 # target to preprocess a source file
-Kakao2020_5.cpp.i:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Kakao2020_5.cpp.i
-.PHONY : Kakao2020_5.cpp.i
+test.cpp.i:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/test.cpp.i
+.PHONY : test.cpp.i
 
-Kakao2020_5.s: Kakao2020_5.cpp.s
+test.s: test.cpp.s
 
-.PHONY : Kakao2020_5.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-Kakao2020_5.cpp.s:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Kakao2020_5.cpp.s
-.PHONY : Kakao2020_5.cpp.s
+test.cpp.s:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... q"
-	@echo "... Kakao2020_5.o"
-	@echo "... Kakao2020_5.i"
-	@echo "... Kakao2020_5.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

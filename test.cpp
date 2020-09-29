@@ -9,9 +9,8 @@ using std::cout;
 using std::endl;
 
  
-template<typename Container_, typename value_type = Container_::value_type>
+template<typename Container_, typename value_type = typename Container_::value_type>
 std::vector<std::vector<value_type> > Combination(Container_ container, int r) {
-    Container_::
     int n = container.size();
     if (n < r) return {};
     if (r < 0) return {};

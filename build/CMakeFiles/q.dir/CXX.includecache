@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/min/Desktop/cpp/study/algorithm/test.cpp
-iostream
--
-algorithm
+/Users/min/Desktop/cpp/study/algorithm/study/CountRoom.cpp
+string
 -
 vector
 -
-string
+iostream
+-
+set
 -
 

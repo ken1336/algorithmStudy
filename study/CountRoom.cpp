@@ -42,12 +42,13 @@ int solution(std::vector<int> arrows)
 
             //auto hit = store.find(curr);
             auto hit = line.find(curr);
+            cout<<curr.first<<","<<curr.second<<": "<<hit->second<<endl;
             if (hit != line.end()) //지나간 적 있을때
             {
                 
                 if (hit->second == 1)
                 {
-                    cout<<hit->first.first<<","<<hit->first.second<<": "<<hit->second<<endl;
+                    
                     answer++;
                 }
                 hit->second++;
@@ -83,11 +84,11 @@ int main()
     vector<int> testcase2 = {4, 2, 7, 4, 2, 7};                                       //1
     vector<int> testcase3 = {4, 0};                                                   // 0
     vector<int> testcase4 = {2, 5, 2, 7};
-    auto result = solution(testcase2);
+    //auto result = solution(testcase2);
     test(solution(testcase), 3);
     test(solution(testcase1), 2);
     test(solution(testcase2), 1);
     test(solution(testcase3), 0);
     test(solution(testcase4), 2);
-    return result;
+    //return result;
 }

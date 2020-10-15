@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/min/Desktop/cpp/study/algorithm/study/CountRoom.cpp
-string
--
-vector
--
+/Users/min/Desktop/cpp/study/algorithm/study/cpp17.cpp
 iostream
 -
-set
+memory
 -
-map
+typeinfo
 -
 

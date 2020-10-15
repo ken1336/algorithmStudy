@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/q.dir/study/CountRoom.cpp.o"
+  "CMakeFiles/q.dir/study/cpp17.o"
   "q"
   "q.pdb"
 )

@@ -123,32 +123,20 @@ q/fast:
 	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/build
 .PHONY : q/fast
 
-study/CountRoom.o: study/CountRoom.cpp.o
-
-.PHONY : study/CountRoom.o
-
 # target to build an object file
-study/CountRoom.cpp.o:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/study/CountRoom.cpp.o
-.PHONY : study/CountRoom.cpp.o
-
-study/CountRoom.i: study/CountRoom.cpp.i
-
-.PHONY : study/CountRoom.i
+study/cpp17.o:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/study/cpp17.o
+.PHONY : study/cpp17.o
 
 # target to preprocess a source file
-study/CountRoom.cpp.i:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/study/CountRoom.cpp.i
-.PHONY : study/CountRoom.cpp.i
-
-study/CountRoom.s: study/CountRoom.cpp.s
-
-.PHONY : study/CountRoom.s
+study/cpp17.i:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/study/cpp17.i
+.PHONY : study/cpp17.i
 
 # target to generate assembly for a file
-study/CountRoom.cpp.s:
-	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/study/CountRoom.cpp.s
-.PHONY : study/CountRoom.cpp.s
+study/cpp17.s:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/study/cpp17.s
+.PHONY : study/cpp17.s
 
 # Help Target
 help:
@@ -159,9 +147,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... q"
-	@echo "... study/CountRoom.o"
-	@echo "... study/CountRoom.i"
-	@echo "... study/CountRoom.s"
+	@echo "... study/cpp17.o"
+	@echo "... study/cpp17.i"
+	@echo "... study/cpp17.s"
 .PHONY : help
 
 

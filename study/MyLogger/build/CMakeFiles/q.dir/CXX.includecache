@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/min/Desktop/cpp/study/algorithm/study/MyLogger/Lock.hpp
+atomic
+-
+mutex
+-
+
+/Users/min/Desktop/cpp/study/algorithm/study/MyLogger/Mutex.hpp
+Lock.hpp
+/Users/min/Desktop/cpp/study/algorithm/study/MyLogger/Lock.hpp
+
+/Users/min/Desktop/cpp/study/algorithm/study/MyLogger/main.cpp
+iostream
+-
+Mutex.hpp
+/Users/min/Desktop/cpp/study/algorithm/study/MyLogger/Mutex.hpp
+

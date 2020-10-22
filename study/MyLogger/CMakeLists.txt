@@ -16,5 +16,5 @@ foreach(i ${CMAKE_CXX_COMPILE_FEATURES})
   message("${i}")
 endforeach()
 
-set(main main.cpp)
+set(main main.cpp Mutex.cpp)
 add_executable(q ${main})

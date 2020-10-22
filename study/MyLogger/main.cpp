@@ -3,7 +3,10 @@
 
 int main(){
 
-    auto test = min::MutextLock{};
+    min::MutexLock test{};
+    test.Lock();
+    test.Lock();
+    test.Unlock();
     return 0;
 
 }

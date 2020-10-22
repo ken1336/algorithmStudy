@@ -1,20 +1,25 @@
 #include "Lock.hpp"
-
+#include<iostream>
+#include<thread>
+#include<mutex>
 namespace min
 {
 
-    class MutextLock : public min::LockBase
+    class MutexLock : public min::LockBase
     {
 
     private:
-        virtual void _Lock();
-
+        std::mutex _mutex;
+        std::thread::id _threadID;
+        int _recursiveLockCount;
     public:
-        virtual void Lock();
-        virtual void Unlock();
-        virtual void LockWrite();
-        virtual void UnLockWrite();
-        virtual void LockRead();
-        virtual void UnLockRead();
+        MutexLock(){};
+        void Lock();
+        void Unlock();
+        void LockWrite();
+        void UnLockWrite();
+        void LockRead();
+        void UnLockRead();
+        virtual ~MutexLock() = default;
     };
 } // namespace min

@@ -124,6 +124,21 @@ q/fast:
 .PHONY : q/fast
 
 # target to build an object file
+Mutex.o:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Mutex.o
+.PHONY : Mutex.o
+
+# target to preprocess a source file
+Mutex.i:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Mutex.i
+.PHONY : Mutex.i
+
+# target to generate assembly for a file
+Mutex.s:
+	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/Mutex.s
+.PHONY : Mutex.s
+
+# target to build an object file
 main.o:
 	$(MAKE) -f CMakeFiles/q.dir/build.make CMakeFiles/q.dir/main.o
 .PHONY : main.o
@@ -147,6 +162,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... q"
+	@echo "... Mutex.o"
+	@echo "... Mutex.i"
+	@echo "... Mutex.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/q.dir/Mutex.o"
   "CMakeFiles/q.dir/main.o"
   "q"
   "q.pdb"

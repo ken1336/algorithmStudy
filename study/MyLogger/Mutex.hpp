@@ -16,10 +16,6 @@ namespace min
         MutexLock(){};
         void Lock();
         void Unlock();
-        void LockWrite();
-        void UnLockWrite();
-        void LockRead();
-        void UnLockRead();
         virtual ~MutexLock() = default;
     };
 } // namespace min

@@ -1,12 +1,10 @@
 #include<iostream>
 #include"Mutex.hpp"
-
+#include"SharedResource.hpp"
 int main(){
 
-    min::MutexLock test{};
-    test.Lock();
-    test.Lock();
-    test.Unlock();
+    min::SharedResource sh(10);
+    std::cout<<sh.getT()<<std::endl;
     return 0;
 
 }

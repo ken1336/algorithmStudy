@@ -57,10 +57,6 @@ void printT(T t){
 //  template<typename... Args>
 //  void printArgs(Args)
 
-constexpr int printArgs(int ... args)){
-    
-    return 0;
-}
 int main()
 {
     

@@ -1,8 +1,10 @@
 #include<iostream>
+#include<memory>
 
 int main(){
 
     int data[10000]={};
+    
 
     auto result1 = 0;
     

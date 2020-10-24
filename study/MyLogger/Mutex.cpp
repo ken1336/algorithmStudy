@@ -3,13 +3,12 @@
 namespace min{
 
     void MutexLock::Lock(){
-        auto test = std::this_thread::get_id();
-        if(this->_threadID == test){
-            std::cout<<"Dup lock: "<<test<<"=="<<_threadID<<std::endl;
+        auto currentThread = std::this_thread::get_id();
+        if(this->_threadID == currentThread){
+            std::cerr<<"Lock duplicated"<<std::endl;
             return;
         }
-        _threadID = test;
-        std::cout<<"Thread id: "<<test<<std::endl;
+        _threadID = currentThread;
         _mutex.lock();
        
 
@@ -17,6 +16,7 @@ namespace min{
     }
     void MutexLock::Unlock(){
         std::cout<<"Call unlock "<<std::endl;
+        _threadID=0;
         _mutex.unlock();
     }
     

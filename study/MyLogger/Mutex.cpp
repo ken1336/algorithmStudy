@@ -16,18 +16,7 @@ namespace min{
     }
     void MutexLock::Unlock(){
         std::cout<<"Call unlock "<<std::endl;
-        _threadID=0;
         _mutex.unlock();
     }
-    
-    void MutexLock::LockWrite(){
 
-    }
-    void MutexLock::UnLockWrite(){
-
-    }
-    void MutexLock::LockRead(){
-        
-    }
-    void MutexLock::UnLockRead(){}
 }

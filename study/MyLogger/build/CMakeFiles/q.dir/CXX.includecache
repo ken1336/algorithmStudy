@@ -28,6 +28,14 @@ mutex
 memory
 -
 
+/Users/min/Desktop/cpp/study/algorithm/study/MyLogger/SharedResource2.hpp
+mutex
+-
+memory
+-
+functional
+-
+
 /Users/min/Desktop/cpp/study/algorithm/study/MyLogger/main.cpp
 iostream
 -
@@ -35,6 +43,8 @@ Mutex.hpp
 /Users/min/Desktop/cpp/study/algorithm/study/MyLogger/Mutex.hpp
 SharedResource.hpp
 /Users/min/Desktop/cpp/study/algorithm/study/MyLogger/SharedResource.hpp
+SharedResource2.hpp
+/Users/min/Desktop/cpp/study/algorithm/study/MyLogger/SharedResource2.hpp
 vector
 -
 

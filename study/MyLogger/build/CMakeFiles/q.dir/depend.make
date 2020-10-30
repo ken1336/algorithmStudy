@@ -4,5 +4,6 @@
 CMakeFiles/q.dir/main.o: ../Lock.hpp
 CMakeFiles/q.dir/main.o: ../Mutex.hpp
 CMakeFiles/q.dir/main.o: ../SharedResource.hpp
+CMakeFiles/q.dir/main.o: ../SharedResource2.hpp
 CMakeFiles/q.dir/main.o: ../main.cpp
 

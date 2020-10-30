@@ -6,48 +6,59 @@ namespace min
     template <typename T>
     class SharedResource
     {
-        class LockResource;
 
     public:
-        SharedResource(T t)
-        {
-            _resource = t;
+        class LockResource;
+        SharedResource(const T &t) : _resource(t) {}
+        SharedResource(const SharedResource &sr){
+            std::cout<<"copy constructor"<<std::endl;
         }
         SharedResource()
         {
             T createResource;
             this->_resource = createResource;
         }
-        LockResource GetWithLock()
+        LockResource &&GetWithLock()
         {
-            return LockResource(_resource,_mutex);
-        }
+            //std::cout<<&_resource<<std::endl;
 
-    private:
-        T _resource;
-        std::mutex _mutex;
+            return std::move(LockResource(*this));
+            //return LockResource(_resource);
+        }
+        ~SharedResource(){}
 
         class LockResource
         {
         public:
-            LockResource(const T &t, std::mutex &mutex)
+
+            LockResource(SharedResource<T> &sr) : _sr(sr){
+                std::cout<<"lock "<<&_sr._mutex<<": "<<_sr._resource<<std::endl;
+                _sr._mutex.lock();
+            }
+            ~LockResource()
             {
-                std::lock_guard<std::mutex> _mutex(mutex);
+                std::cout<<"unlock "<<&_sr._mutex<<": "<<_sr._resource<<std::endl;
+                _sr._mutex.unlock();
+            }
+            template<typename IN>
+            T operator=(IN in){
+                std::cout<<"= operator"<<std::endl;
+                return _sr._resource;
+            }
+            T &Get()
+            {
+                return _sr._resource;
+            }
 
-                this->_resource = t;
-            }
-            ~LockResource(){
-                std::cout<<"unlock"<<std::endl;
-                
-            }
-            T Get(){
-                
-            }
         private:
-        T _resource;
-
-
+        SharedResource<T> &_sr;
+       
         };
+
+    protected:
+        
+        T _resource;
+        std::mutex _mutex;
     };
 
 } // namespace min

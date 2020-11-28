@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/min/Desktop/cpp/study/algorithm/nhn/q3.cpp
+string
+-
+iostream
+-
+unordered_map
+-
+algorithm
+-
+vector
+-
+set
+-
+
